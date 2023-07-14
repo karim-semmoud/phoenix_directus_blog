@@ -2,8 +2,11 @@ defmodule PhoenixDirectusBlogWeb.PageController do
   use PhoenixDirectusBlogWeb, :controller
 
   def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home)
+
+    conn
+    |> PhoenixDirectusBlogWeb.TopicsController.list_all_topics(conn)
+    |> PhoenixDirectusBlogWeb.ArticlesController.list_all_articles(conn)
+    |> render(:home)
   end
+
 end

@@ -8,6 +8,7 @@ defmodule PhoenixDirectusBlogWeb.Router do
     plug :put_root_layout, html: {PhoenixDirectusBlogWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug PhoenixDirectusBlogWeb.LocalePlug
   end
 
   pipeline :api do
@@ -18,6 +19,7 @@ defmodule PhoenixDirectusBlogWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    resources "/articles", ArticlesController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.

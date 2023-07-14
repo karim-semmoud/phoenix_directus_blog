@@ -16,6 +16,7 @@ defmodule PhoenixDirectusBlog.Application do
       {Phoenix.PubSub, name: PhoenixDirectusBlog.PubSub},
       # Start Finch
       {Finch, name: PhoenixDirectusBlog.Finch},
+      {Cachex, name: :my_cache_directus},
       # Start the Endpoint (http/https)
       PhoenixDirectusBlogWeb.Endpoint
       # Start a worker by calling: PhoenixDirectusBlog.Worker.start_link(arg)

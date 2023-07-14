@@ -20,5 +20,9 @@ defmodule PhoenixDirectusBlogWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :phoenix_directus_blog
+  use Gettext,
+  otp_app: :phoenix_directus_blog,
+  gettext_apps: [:phoenixapp],
+  default_locale: "en",
+  locales: ~w(fr)
 end
