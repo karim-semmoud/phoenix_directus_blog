@@ -15,12 +15,14 @@ defmodule PhoenixDirectusBlogWeb.ArticlesController do
     detailed_description = Map.get(article, "detailed_description")
     article_body = Map.get(article, "article_body")
     topics = Map.get(article, "topics", [])
+    image = Map.get(article, "image")
 
     conn
     |> assign(:full_title, full_title)
     |> assign(:detailed_description, detailed_description)
     |> assign(:article_body, article_body)
     |> assign(:topics, topics)
+    |> assign(:image, image)
     |> render(:show)
   end
 
@@ -31,9 +33,11 @@ defmodule PhoenixDirectusBlogWeb.ArticlesController do
     result = Directus.Articles.all()
     articles = Enum.map(result["data"], fn entry ->
       %{
-        id: Map.get(entry, "id", "Default Value"),
-        full_title: Map.get(entry, "full_title", "Default Value"),
-        detailed_description: Map.get(entry, "detailed_description", "Default Description"),
+        id: Map.get(entry, "id"),
+        full_title: Map.get(entry, "full_title"),
+        detailed_description: Map.get(entry, "detailed_description"),
+        image: Map.get(entry, "image", "image")
+
         # Add more fields here
       }
     end)

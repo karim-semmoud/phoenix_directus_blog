@@ -3,13 +3,13 @@
 <section class="bg-white dark:bg-gray-900">
   <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <a href="#">
-          <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+          <img class="rounded-t-lg" src={"http://0.0.0.0:8055/assets/#{@image}"} alt="" />
       </a>
       <div class="p-5">
           <a href="#">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"><%= @full_title %></h5>
           </a>
-          
+          <%= @image %>
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"><%= @detailed_description %></p>
             <%= for topic <- @topics do %>
    <li class="mr-2">
