@@ -16,7 +16,6 @@ defmodule PhoenixDirectusBlogWeb.ArticlesController do
     topics = Map.get(article, "topics", [])
     image = Map.get(article, "image")
     translations_id = Map.get(article, "translations")
-    Logger.info("translation id: #{inspect(translations_id)}")
     translations = PhoenixDirectusBlogWeb.ArticlesController.list_translations(translations_id)
 
     conn
@@ -51,7 +50,6 @@ defmodule PhoenixDirectusBlogWeb.ArticlesController do
 
   def list_translations(translations_id) do
     result = Directus.ArticlesTranslations.all()
-    Logger.info("translation: #{inspect(result)}")
     translations = Enum.map(result["data"], fn entry ->
       %{
         id: Map.get(entry, "id"),
@@ -60,6 +58,8 @@ defmodule PhoenixDirectusBlogWeb.ArticlesController do
         # Add more fields here
       }
     end)
+
+    translations
 
   end
 

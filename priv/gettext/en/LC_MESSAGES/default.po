@@ -16,23 +16,53 @@ msgstr ""
 msgid "Actions"
 msgstr ""
 
-#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:22
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:41
 #, elixir-autogen, elixir-format
 msgid "English"
-msgstr ""
-
-#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:42
-#, elixir-autogen, elixir-format
-msgid "Français"
-msgstr ""
-
-#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:7
-#, elixir-autogen, elixir-format
-msgid "Phoenix Directus Blog"
 msgstr ""
 
 #: lib/phoenix_directus_blog_web/components/core_components.ex:76
 #: lib/phoenix_directus_blog_web/components/core_components.ex:128
 #, elixir-autogen, elixir-format
 msgid "close"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/controllers/page_html/home.html.heex:4
+#, elixir-autogen, elixir-format
+msgid "All"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:39
+#, elixir-autogen, elixir-format, fuzzy
+msgid "English Flag"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:58
+#, elixir-autogen, elixir-format
+msgid "French"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:56
+#, elixir-autogen, elixir-format
+msgid "French Flag"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:5
+#, elixir-autogen, elixir-format
+msgid "Homepage Logo"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Languages"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/components/layouts/app.html.heex:7
+#, elixir-autogen, elixir-format, fuzzy
+msgid "Phoenix Blog"
+msgstr ""
+
+#: lib/phoenix_directus_blog_web/controllers/page_html/home.html.heex:27
+#, elixir-autogen, elixir-format
+msgid "Read more"
 msgstr ""

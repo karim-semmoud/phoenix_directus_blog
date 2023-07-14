@@ -2,7 +2,9 @@ defmodule PhoenixDirectusBlogWeb.LocalePlug do
   alias Plug.Conn
   @behaviour Plug
 
+
   @locales Gettext.known_locales(PhoenixDirectusBlogWeb.Gettext)
+
   @cookie "PhoenixDirectusBlogWeb"
   @ten_days 10 * 24 * 60 * 60
 
